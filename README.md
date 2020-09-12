@@ -1,14 +1,28 @@
-# calculator-using-c
+//calculator-using-c
 #include<stdio.h>
 int main()
 {
 float a,b;
-printf("enter the two numbers: ");
-scanf("%f%f",&a,&b);
-printf("\nsum is %f: ",a+b);
-printf("\ndifference is %f: ",a-b);
-printf("\nmultiplication is %f: ",a*b);
-printf("\ndivision is %f: ",a/b);
-return 0;
+char op;
+printf("Enter the expression:");
+scanf("%f%c%f",&a,&op,&b);
+
+switch(op)
+    {
+    case'+':
+    printf("%.1lf + %.1lf=%.1lf",a,b,a+b);
+    break;
+    case '-':
+    printf("%f - %f=%f",a,b,a-b);
+    break;
+    case '*':
+    printf("%f * %f=%f",a,b,a*b);
+    break;
+    case '/':
+    printf("%f / %f=%f",a,b,a/b);
+    break;
+
+    default:
+    printf("\nThe operator is not correct");
+    }
 }
- 
